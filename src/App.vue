@@ -1,25 +1,23 @@
 <template>
-  <div class="top-icon" @click="showTopMenu = !showTopMenu">
-    <div class="main-item menu" v-if="!showTopMenu">
-      <span class="line line01"></span>
-      <span class="line line02"></span>
-      <span class="line line03"></span>
-    </div>
-    <div v-else>
-      X
-    </div>
+  <div>
+    <Hamburger/>
+    <h1 class="name">
+      <span v-for="char in name1" :key="char"> {{ char }} </span>
+      <br>
+      <span v-for="char in name2" :key="char"> {{ char }} </span>
+    </h1>
   </div>
-  <h1>Sebastian Montén</h1>
 </template>
 
 <script>
-
+import Hamburger from './components/Hamburger'
 export default {
   name: 'App',
-  components: {},
+  components: {Hamburger},
   data() {
     return {
-      showTopMenu: true
+      name1: 'Sebastian',
+      name2: 'Montén'
     }
   }
 }
@@ -32,51 +30,31 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ddd;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  background: #071b2b;
 }
 body {
   color: #ddd;
   background: #071b2b;
 }
-.top-icon {
-  background: #29afd1;
-  display: inline-block;
-  border-radius: 500px;
-  margin: 10px;
-  position: relative;
-  padding: 80px;
-  cursor: pointer;
+
+h1 {
+    font-size: 62px;
+    color: white;
+    text-align: left;
 }
 
-.main-item {
-  width: 150px;
-  height: 150px;
-  position: relative;
+h1 span { 
+    display: inline-block;
+    /* -webkit-transition: all 0.1s ease-out; */
+    transition: all cubic-bezier(.32,.16,.27,2.0) 0.1s;
+    
 }
 
-.line {
-  position: absolute;
-  height: 15px;
-  width: 100%;
-  background: white;
-  border-radius: 10px;
-  transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
-}
-
-.line01 {
-  top: 19%;
-}
-
-.line02 {
-  top: 49%;
-}
-
-.line03 {
-  top: 79%;
-}
-
-.menu.close .line01 {
-  transform: rotate(45deg);
-  top: 49%;
+h1 span:hover {
+    /* -webkit-transform: scale(2.0); */
+    color: #00d9bc;
+    transform: scaleY(1.8);
+    cursor: pointer;
 }
 </style>
