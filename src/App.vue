@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Hamburger from './components/Hamburger.vue'
+import Hamburger from './components/Hamburger'
 export default {
   name: 'App',
   components: {Hamburger},
@@ -78,21 +78,6 @@ h1 span:hover {
     color: #00d9bc;
     transform: scaleY(1.8);
     cursor: pointer;
-}
-
-h2 {
-  display: inline-block;
-  font-family:'Courier New', Courier, monospace;
-  font-size: 25px;
-  text-align: left;
-  color: white;
-  font-weight: 8;
-  transition: all cubic-bezier(.32,.16,.27,2.0) 0.1s;
-}
-.active_label {
-  color: #00d9bc;
-  transform: scaleY(2);
-  
 }
 
 </style>

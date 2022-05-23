@@ -1,10 +1,10 @@
 <template>
-    <div style="display: flex; justify-content: flex-start" @mouseenter="toggleActive" @mouseleave="toggleActive" @click="toggleMenue">
-        <span class="hamburger">
+    <div style="display: flex; justify-content: flex-start" >
+        <span class="hamburger" @mouseenter="toggleActive" @mouseleave="toggleActive" @click="toggleMenue">
             <span class="myLine line01" :class="{active: is_active, line01x: menu_active}" ></span>
             <span class="myLine line02" :class="{active: is_active, line02x: menu_active}"></span>
         </span>
-        <span v-if="!menu_active" class="label" >
+        <span v-if="!menu_active" class="label" @mouseenter="toggleActive" @mouseleave="toggleActive" @click="toggleMenue">
             <h2 :class="{active_label: is_active}">_projecs</h2>
         </span>
     </div>
@@ -55,7 +55,7 @@ export default {
     /* height: 15px;
     border-radius: 15px;
     transform: scaleY(1.3) scaleX(1.2); */
-    background: #00d9bc;
+    background: white;
     /* transition: background 0.1s; */
     
 }
@@ -80,7 +80,20 @@ export default {
 
 
 
-
+h2 {
+  display: inline-block;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  font-weight: 8;
+  transition: all cubic-bezier(.32,.16,.27,2.0) 0.1s;
+}
+.active_label {
+  color: #00d9bc;
+  transform: scaleY(2);
+  
+}
 
 
 .label {
@@ -94,7 +107,7 @@ export default {
   cursor: pointer;
 }
 .active_label {
-  color: #00d9bc;
+  color: white;
   transform: scaleY(2);
 }
 </style>
