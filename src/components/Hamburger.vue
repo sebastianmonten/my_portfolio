@@ -5,7 +5,7 @@
             <span class="myLine line02" :class="{active: is_active, line02x: menu_active}"></span>
         </span>
         <span v-if="!menu_active" class="label" @mouseenter="toggleActive" @mouseleave="toggleActive" @click="toggleMenue">
-            <h2 :class="{active_label: is_active}">_projecs</h2>
+            <h2 :class="{active_label: is_active}">my-projecs</h2>
         </span>
     </div>
 </template>
