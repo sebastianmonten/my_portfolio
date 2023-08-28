@@ -7,24 +7,24 @@
         <span v-for="char in name2" :key="char"> {{ char }} </span>
       </h1>
     </div>
-    <Hamburger/>
-    <!-- <div style="display: flex; justify-content: flex-start">
-      <span>
-      <Hamburger @mouseenter="toggle_active_projects" @mouseleave="toggle_active_projects"/>
-      </span>
-      <span >
-        <h2 class="label" :class="{active_label: active_projects}">_projecs</h2>
-      </span>
-    </div> -->
+    <!-- <Hamburger/> -->
+    <Welcome/>
+    <Project imageFileName="led_frack.png" projectName="FFT Tail Coat"/>
+    <Project imageFileName="kth_logo.png" projectName="Software Engineering"/>
+    <Project imageFileName="ray_tracer.png" projectName="Ray Tracing Project"/>
+    <Project imageFileName="patch_sjoslaget_2023.png" projectName="Design"/>
   </div>
 </template>
 
 <script>
-import Hamburger from './components/Hamburger'
+import Project from './components/Project.vue'
+// import Hamburger from './components/Hamburger'
+import Welcome from './components/Welcome.vue'
 export default {
   name: 'App',
-  components: {Hamburger},
+  components: {Welcome, Project},
   data() {
+    Project
     return {
       name1: 'Sebastian',
       name2: 'Montén',
@@ -54,7 +54,6 @@ body {
   background: #071b2b;
 }
 .my_name {
-  /* height: 50px; */
   padding: 10px;
 }
 
