@@ -13,7 +13,7 @@
     <Project imageFileName="kth_logo.png" projectName="Software Engineering"/>
     <Project imageFileName="ray_tracer.png" projectName="Ray Tracing Project"/>
     <Project imageFileName="patch_sjoslaget_2023.png" projectName="Design"/>
-    <Project imageFileName="flappy_bird.jpg" projectName="ChipKIT uC32"/>
+    <Project imageFileName="flappy_bird.png" projectName="ChipKIT uC32"/>
   </div>
 </template>
 
