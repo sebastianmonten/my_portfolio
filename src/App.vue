@@ -6,6 +6,7 @@
         <br>
         <span v-for="char in name2" :key="char"> {{ char }} </span>
       </h1>
+      <MyLogo/>
     </div>
     <!-- <Hamburger/> -->
     <Welcome/>
@@ -20,9 +21,10 @@
 import Project from './components/Project.vue'
 // import Hamburger from './components/Hamburger'
 import Welcome from './components/Welcome.vue'
+import MyLogo from './components/MyLogo.vue'
 export default {
   name: 'App',
-  components: {Welcome, Project},
+  components: {Welcome, Project, MyLogo},
   data() {
     Project
     return {
@@ -74,7 +76,7 @@ h1 span {
 
 h1 span:hover {
     /* -webkit-transform: scale(2.0); */
-    color: #00d9bc;
+    color: #62e1d2;
     transform: scaleY(1.8);
     cursor: pointer;
 }
